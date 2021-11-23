@@ -1,0 +1,63 @@
+# Maven
+######################
+*.a
+/TODO
+
+######################
+# Intellij
+######################
+.settings/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+
+######################
+# Eclipse
+######################
+*.pydevproject
+.project
+.metadata
+.springBeans
+tmp/
+tmp/**/*
+tmpFiles
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings
+.loadpath
+.factorypath
+
+######################
+log/
+target/
+
+######################
+# Package Files
+######################
+*.jar
+*.war
+*.ear
+*.db
+
+######################
+# Windows
+######################
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+spring-shell.log
+######################
+# React
+######################
+node_modules
+npm-debug.log
+yarn.lock
