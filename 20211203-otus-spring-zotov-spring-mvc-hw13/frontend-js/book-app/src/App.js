@@ -1,6 +1,7 @@
 import React from 'react';
 import {Admin, Resource} from 'react-admin';
 import {dataProvider} from './provider/DataProvider';
+import {authProvider} from './provider/AuthProvider';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import russianMessages from 'ra-language-russian';
 import UserIcon from '@material-ui/icons/Group';
@@ -33,16 +34,14 @@ const theme = createTheme({
 
 function App() {
     return (
-        <div className="App">
-            <Admin theme={theme} title="Library" dataProvider={dataProvider} i18nProvider={i18nProvider}>
-                <Resource name={"books"} list={BookList} edit={bookEdit} create={bookCreate} icon={MenuBook}
-                          options={{label: 'Книги'}}/>
-                <Resource name={"authors"} list={AuthorList} edit={authorEdit} create={authorCreate} icon={UserIcon}
-                          options={{label: 'Авторы'}}/>
-                <Resource name={"genres"} list={GenreList} edit={genreEdit} create={genreCreate} icon={LibraryBooksIcon}
-                          options={{label: 'Жанры'}}/>
-            </Admin>;
-        </div>
+        <Admin theme={theme} title="Library" authProvider={authProvider} dataProvider={dataProvider} i18nProvider={i18nProvider}>
+            <Resource name={"books"} list={BookList} edit={bookEdit} create={bookCreate} icon={MenuBook}
+                      options={{label: 'Книги'}}/>
+            <Resource name={"authors"} list={AuthorList} edit={authorEdit} create={authorCreate} icon={UserIcon}
+                      options={{label: 'Авторы'}}/>
+            <Resource name={"genres"} list={GenreList} edit={genreEdit} create={genreCreate} icon={LibraryBooksIcon}
+                      options={{label: 'Жанры'}}/>
+        </Admin>
     )
 }
 
