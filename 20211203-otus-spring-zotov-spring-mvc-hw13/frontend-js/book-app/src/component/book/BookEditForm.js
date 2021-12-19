@@ -31,12 +31,6 @@ export const bookEdit = props => (
                     </ReferenceInput>
                 </SimpleFormIterator>
             </ArrayInput>
-            <ArrayInput source="comments" label="Комментарии">
-                <SimpleFormIterator>
-                        <TextInput label="Текст комментария" source="content"/>
-                        <TextInput label="Автор" source="author"/>
-                </SimpleFormIterator>
-            </ArrayInput>
         </SimpleForm>
     </Edit>
 );
