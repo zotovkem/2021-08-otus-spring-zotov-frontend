@@ -6,6 +6,7 @@ import polyglotI18nProvider from 'ra-i18n-polyglot';
 import russianMessages from 'ra-language-russian';
 import UserIcon from '@material-ui/icons/Group';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import CommentIcon from '@material-ui/icons/Comment';
 import MenuBook from '@material-ui/icons/MenuBook';
 import {authorEdit} from "./component/author/AuthorEditForm";
 import {authorCreate} from "./component/author/AuthorCreateForm";
@@ -17,6 +18,9 @@ import {BookList} from "./component/book/BookList";
 import {bookCreate} from "./component/book/BookCreateForm";
 import {bookEdit} from "./component/book/BookEditForm";
 import {createTheme} from '@material-ui/core/styles';
+import {CommentList} from "./component/comment/CommentList";
+import {commentEdit} from "./component/comment/CommentEditForm";
+import {commentCreate} from "./component/comment/CommentCreateForm";
 
 const i18nProvider = polyglotI18nProvider(() => russianMessages, 'ru');
 
@@ -41,6 +45,8 @@ function App() {
                       options={{label: 'Авторы'}}/>
             <Resource name={"genres"} list={GenreList} edit={genreEdit} create={genreCreate} icon={LibraryBooksIcon}
                       options={{label: 'Жанры'}}/>
+            <Resource name={"comments"} list={CommentList} edit={commentEdit} create={commentCreate} icon={CommentIcon}
+                      options={{label: 'Комментарии'}}/>
         </Admin>
     )
 }
